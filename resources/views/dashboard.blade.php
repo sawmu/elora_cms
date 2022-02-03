@@ -5,34 +5,40 @@
         </h2>
     </x-slot>
 
-    <table class="table">
-        <thead>
-          <tr>
-            <th scope="col">#</th>
-            <th scope="col">First</th>
-            <th scope="col">Last</th>
-            <th scope="col">Handle</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th scope="row">1</th>
-            <td>Mark</td>
-            <td>Otto</td>
-            <td>@mdo</td>
-          </tr>
-          <tr>
-            <th scope="row">2</th>
-            <td>Jacob</td>
-            <td>Thornton</td>
-            <td>@fat</td>
-          </tr>
-          <tr>
-            <th scope="row">3</th>
-            <td colspan="2">Larry the Bird</td>
-            <td>@twitter</td>
-          </tr>
-        </tbody>
-      </table>
+    <div class="py-12">
+        <div class="container">
+            <div class="row">
+                <table class="table table-striped">
+                    <thead class="table-dark">
+                      <tr>
+                        <th scope="col">No</th>
+                        <th scope="col">Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Create At</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                        @php
+                             ($i = 1)
+                        @endphp
+                    @foreach ($users as $user)
+                        <tr>
+                            <th scope="row">{{ $i++ }}</th>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->created_at->diffForHumans() }}</td>
+                        </tr>
+
+                    @endforeach
+                     
+                 
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+
+   
     
 </x-app-layout>

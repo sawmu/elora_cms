@@ -1,6 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use Illuminate\Support\Facades\DB;
+use app\Models\User;
+use App\Http\Controllers\CategoryController;
+use App\Http\Controllers\BrandController;
 
 /*
 |--------------------------------------------------------------------------
@@ -22,5 +26,31 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return view('dashboard');
+    $users = User::latest()->get();
+    return view('dashboard', compact('users'));
 })->name('dashboard');
+
+
+Route::get('/category/all',[CategoryController::class, 'AllCat'])->name('all.category');
+Route::Post('/category/add',[CategoryController::class, 'AddCat'])->name('store.category');
+Route::get('/category/edit/{id}',[CategoryController::class, 'Edit']);
+Route::post('/category/update/{id}',[CategoryController::class, 'Update']);
+Route::get('/category/delete/{id}',[CategoryController::class, 'Delete']);
+
+// Brand Route
+
+Route::get('/brand/all',[BrandController::class, 'AllBrand'])->name('all.brand');
+Route::post('/brand/add',[BrandController::class, 'StoreBrand'])->name('store.brand');
+Route::get('/brand/edit/{id}',[BrandController::class, 'Edit']);
+Route::post('/brand/update/{id}',[BrandController::class, 'Update']);
+Route::get('/brand/delete/{id}',[BrandController::class, 'Delete']);
+
+
+
+
+
+
+
+
+
+
