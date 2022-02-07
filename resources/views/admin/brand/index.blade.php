@@ -52,7 +52,7 @@
                                             <a class="btn btn-primary" href=" {{ url('brand/edit/'.$brand->id)}} "> Edit</a>
                                         </button>
                                         <button type="button" >
-                                            <a class="btn btn-danger" href=" {{ url('brand/delete/'.$brand->id)}} "> Delete </a>
+                                            <a class="btn btn-danger" onclick="return confirm('Are you sure to delete')" href=" {{ url('brand/delete/'.$brand->id)}} "> Delete </a>
                                         </button>
                                     </td>
                                 </tr>
