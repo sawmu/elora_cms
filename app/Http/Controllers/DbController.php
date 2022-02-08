@@ -33,4 +33,9 @@ class DbController extends Controller
 
         return Redirect()->back()->with('success', 'Database Deleted Successfull');
     }
+
+    public function Delete(){
+        $brands = Brand::delete();
+
+    }
 }
