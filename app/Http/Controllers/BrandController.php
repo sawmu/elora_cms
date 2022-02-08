@@ -12,6 +12,8 @@ use Image;
 
 class BrandController extends Controller
 {
+
+   
    
 
     public function AllBrand(){
