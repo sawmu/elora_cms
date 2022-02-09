@@ -9,6 +9,10 @@ use Illuminate\Http\Request;
 
 class DbController extends Controller
 {
+    public function __construct(){
+        $this->middleware('auth');
+    }
+    
     public function DbSetting(){
 
         $brands = Brand::latest()->paginate(5);
