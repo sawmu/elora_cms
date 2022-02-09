@@ -1069,9 +1069,6 @@ select {
 .mb-4 {
   margin-bottom: 1rem;
 }
-.-mt-px {
-  margin-top: -1px;
-}
 .mb-2 {
   margin-bottom: 0.5rem;
 }
@@ -1080,6 +1077,9 @@ select {
 }
 .mb-0 {
   margin-bottom: 0px;
+}
+.-mt-px {
+  margin-top: -1px;
 }
 .block {
   display: block;
