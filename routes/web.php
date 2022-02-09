@@ -31,8 +31,8 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    $users = User::latest()->get();
-    return view('dashboard', compact('users'));
+    // $users = User::latest()->get();
+    return view('admin.index');
 })->name('dashboard');
 
 
