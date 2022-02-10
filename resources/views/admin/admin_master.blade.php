@@ -63,17 +63,8 @@
                 <!-- Aplication Brand -->
                 <div class="app-brand">
                     <a href="/index.html">
-                        <svg class="brand-icon" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMidYMid" width="30" height="33" viewBox="0 0 30 33">
-                  <g fill="none" fill-rule="evenodd">
-                    <path
-                      class="logo-fill-blue"
-                      fill="#7DBCFF"
-                      d="M0 4v25l8 4V0zM22 4v25l8 4V0z"
-                    />
-                    <path class="logo-fill-white" fill="#FFF" d="M11 4v25l8 4V0z" />
-                  </g>
-                </svg>
-                        <span class="brand-name">Sleek Dashboard</span>
+                       <img style="width: 30px; height: 30px" src="{{asset('backend\elora.png')}}" alt="">
+                        <span class="brand-name">Elora Dashboard</span>
                     </a>
                 </div>
                 <!-- begin sidebar scrollbar -->
@@ -635,13 +626,13 @@
                     <div class="navbar-right ">
                         <ul class="nav navbar-nav">
                             <!-- Github Link Button -->
-                            <li class="github-link mr-3">
+                            {{-- <li class="github-link mr-3">
                                 <a class="btn btn-outline-secondary btn-sm" href="https://github.com/tafcoder/sleek-dashboard" target="_blank">
                                     <span class="d-none d-md-inline-block mr-2">Source Code</span>
                                     <i class="mdi mdi-github-circle"></i>
                                 </a>
 
-                            </li>
+                            </li> --}}
                             <li class="dropdown notifications-menu">
                                 <button class="dropdown-toggle" data-toggle="dropdown">
                       <i class="mdi mdi-bell-outline"></i>
