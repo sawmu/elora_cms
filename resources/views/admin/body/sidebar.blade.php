@@ -3,8 +3,8 @@
     <div id="sidebar" class="sidebar sidebar-with-footer">
         <!-- Aplication Brand -->
         <div class="app-brand">
-            <a href="/index.html">
-               <img style="width: 30px; height: 30px" src="{{asset('backend\elora.png')}}" alt="">
+            <a href="/" target="black">
+               <img style="width: 30px; height: 30px" src="{{asset('backend\elora.png')}}" alt="Elora Logo">
                 <span class="brand-name">Elora Dashboard</span>
             </a>
         </div>

@@ -26,8 +26,8 @@
 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.css" >
 
-  <!-- FAVICON -->
-  <link href="assets/img/favicon.png" rel="shortcut icon" />
+   <!-- FAVICON -->
+   <link href="{{asset('backend\elora.png')}}" rel="shortcut icon" />
 
   <!--
     HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries

@@ -6,6 +6,9 @@
 
         <title>Laravel</title>
 
+         <!-- FAVICON -->
+    <link href="{{asset('backend\elora.png')}}" rel="shortcut icon" />
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap" rel="stylesheet">
 
