@@ -148,4 +148,9 @@ class BrandController extends Controller
 
         return Redirect()->back()->with('success', 'Image Inserted Successfull');
     }
+
+    public function Logout(){
+        Auth::logout();
+        return Redirect()->route('login')->with('success', 'Logout Successfull');
+    }
 }

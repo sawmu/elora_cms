@@ -62,6 +62,9 @@ Route::get('database/delete/allCate',[DbController::class, 'DbAllCateDelete']);
 Route::get('database/delete/brand',[DbController::class, 'DbBrandDelete']);
 Route::get('database/delete/multi',[DbController::class, 'DbMultiDelete']);
 
+Route::get('/user/logout',[BrandController::class, 'Logout'])->name('user.logout');
+
+
 
 
 
