@@ -15,7 +15,7 @@ class CategoryApiController extends Controller
      */
     public function index()
     {
-        // return Category::all();
+        return Category::all();
         $categories = Category::all();
         return $categories;
     }
