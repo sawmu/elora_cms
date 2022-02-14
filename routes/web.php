@@ -6,6 +6,7 @@ use app\Models\User;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\DbController;
+use Artesaos\SEOTools\Facades\SEOTools;
 
 /*
 |--------------------------------------------------------------------------

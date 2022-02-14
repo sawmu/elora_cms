@@ -7,6 +7,11 @@ use App\Models\Category;
 use Auth;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
+use Artesaos\SEOTools\Facades\SEOTools;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
+use Artesaos\SEOTools\Facades\JsonLd;
 
 class CategoryController extends Controller
 {
@@ -17,6 +22,8 @@ class CategoryController extends Controller
 
     public function AllCat()
     {
+        SEOMeta::setTitle('Category');
+        SEOMeta::setDescription('This is my page description');
         $categories = Category::latest()->paginate(7);
         return view('admin.category.index', compact('categories'));
     }

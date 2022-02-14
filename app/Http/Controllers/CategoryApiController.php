@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Category;
+use Artesaos\SEOTools\Facades\SEOMeta;
+use Artesaos\SEOTools\Facades\OpenGraph;
+use Artesaos\SEOTools\Facades\TwitterCard;
+use Artesaos\SEOTools\Facades\JsonLd;
 
 use Illuminate\Http\Request;
 
@@ -15,6 +19,8 @@ class CategoryApiController extends Controller
      */
     public function index()
     {
+        SEOMeta::setTitle('Category');
+        SEOMeta::setDescription('This is my page description');
         return Category::all();
         $categories = Category::all();
         return $categories;
