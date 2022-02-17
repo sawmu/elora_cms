@@ -51,7 +51,7 @@
               <form method="POST" action="{{ route('login') }}">
                 @csrf
                 <div class="row">
-                  <div class="form-group col-md-12 mb-4">
+                  <div id="email" class="form-group col-md-12 mb-4">
                     <input type="email" class="form-control input-lg" id="email" aria-describedby="emailHelp" placeholder="email" name="email">
                   </div>
 

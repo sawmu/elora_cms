@@ -1,0 +1,461 @@
+{
+  "ignition.healthCheck": {
+    "name": "ignition.healthCheck",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\HealthCheckController",
+    "uri": "_ignition/health-check",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "ignition.executeSolution": {
+    "name": "ignition.executeSolution",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\ExecuteSolutionController",
+    "uri": "_ignition/execute-solution",
+    "method": [
+      "POST"
+    ]
+  },
+  "ignition.shareReport": {
+    "name": "ignition.shareReport",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\ShareReportController",
+    "uri": "_ignition/share-report",
+    "method": [
+      "POST"
+    ]
+  },
+  "ignition.scripts": {
+    "name": "ignition.scripts",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\ScriptController",
+    "uri": "_ignition/scripts/{script}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "ignition.styles": {
+    "name": "ignition.styles",
+    "domain": null,
+    "action": "Facade\\Ignition\\Http\\Controllers\\StyleController",
+    "uri": "_ignition/styles/{style}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "cypress.factory": {
+    "name": "cypress.factory",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@factory",
+    "uri": "__cypress__/factory",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.login": {
+    "name": "cypress.login",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@login",
+    "uri": "__cypress__/login",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.logout": {
+    "name": "cypress.logout",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@logout",
+    "uri": "__cypress__/logout",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.artisan": {
+    "name": "cypress.artisan",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@artisan",
+    "uri": "__cypress__/artisan",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.run-php": {
+    "name": "cypress.run-php",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@runPhp",
+    "uri": "__cypress__/run-php",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.csrf-token": {
+    "name": "cypress.csrf-token",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@csrfToken",
+    "uri": "__cypress__/csrf_token",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "cypress.routes": {
+    "name": "cypress.routes",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@routes",
+    "uri": "__cypress__/routes",
+    "method": [
+      "POST"
+    ]
+  },
+  "cypress.current-user": {
+    "name": "cypress.current-user",
+    "domain": null,
+    "action": "Laracasts\\Cypress\\Controllers\\CypressController@currentUser",
+    "uri": "__cypress__/current-user",
+    "method": [
+      "POST"
+    ]
+  },
+  "login": {
+    "name": "login",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\LoginController@showLoginForm",
+    "uri": "login",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "": {
+    "name": null,
+    "domain": null,
+    "action": "App\\Http\\Controllers\\HomeController@Delete",
+    "uri": "slider/delete/{id}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "logout": {
+    "name": "logout",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\LoginController@logout",
+    "uri": "logout",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.request": {
+    "name": "password.request",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ForgotPasswordController@showLinkRequestForm",
+    "uri": "password/reset",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.reset": {
+    "name": "password.reset",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ResetPasswordController@showResetForm",
+    "uri": "password/reset/{token}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.email": {
+    "name": "password.email",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ForgotPasswordController@sendResetLinkEmail",
+    "uri": "password/email",
+    "method": [
+      "POST"
+    ]
+  },
+  "password.update": {
+    "name": "password.update",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ResetPasswordController@reset",
+    "uri": "password/reset",
+    "method": [
+      "POST"
+    ]
+  },
+  "register": {
+    "name": "register",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\RegisterController@showRegistrationForm",
+    "uri": "register",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "verification.notice": {
+    "name": "verification.notice",
+    "domain": null,
+    "action": "Closure",
+    "uri": "email/verify",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "verification.verify": {
+    "name": "verification.verify",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\VerifyEmailController@__invoke",
+    "uri": "email/verify/{id}/{hash}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "verification.send": {
+    "name": "verification.send",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\EmailVerificationNotificationController@store",
+    "uri": "email/verification-notification",
+    "method": [
+      "POST"
+    ]
+  },
+  "user-profile-information.update": {
+    "name": "user-profile-information.update",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\ProfileInformationController@update",
+    "uri": "user/profile-information",
+    "method": [
+      "PUT"
+    ]
+  },
+  "user-password.update": {
+    "name": "user-password.update",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\PasswordController@update",
+    "uri": "user/password",
+    "method": [
+      "PUT"
+    ]
+  },
+  "password.confirm": {
+    "name": "password.confirm",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\Auth\\ConfirmPasswordController@showConfirmForm",
+    "uri": "password/confirm",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "password.confirmation": {
+    "name": "password.confirmation",
+    "domain": null,
+    "action": "Laravel\\Fortify\\Http\\Controllers\\ConfirmedPasswordStatusController@show",
+    "uri": "user/confirmed-password-status",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "terms.show": {
+    "name": "terms.show",
+    "domain": null,
+    "action": "Laravel\\Jetstream\\Http\\Controllers\\Livewire\\TermsOfServiceController@show",
+    "uri": "terms-of-service",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "policy.show": {
+    "name": "policy.show",
+    "domain": null,
+    "action": "Laravel\\Jetstream\\Http\\Controllers\\Livewire\\PrivacyPolicyController@show",
+    "uri": "privacy-policy",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "profile.show": {
+    "name": "profile.show",
+    "domain": null,
+    "action": "Laravel\\Jetstream\\Http\\Controllers\\Livewire\\UserProfileController@show",
+    "uri": "user/profile",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "api-tokens.index": {
+    "name": "api-tokens.index",
+    "domain": null,
+    "action": "Laravel\\Jetstream\\Http\\Controllers\\Livewire\\ApiTokenController@index",
+    "uri": "user/api-tokens",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "livewire.message": {
+    "name": "livewire.message",
+    "domain": null,
+    "action": "Livewire\\Controllers\\HttpConnectionHandler",
+    "uri": "livewire/message/{name}",
+    "method": [
+      "POST"
+    ]
+  },
+  "livewire.upload-file": {
+    "name": "livewire.upload-file",
+    "domain": null,
+    "action": "Livewire\\Controllers\\FileUploadHandler@handle",
+    "uri": "livewire/upload-file",
+    "method": [
+      "POST"
+    ]
+  },
+  "livewire.preview-file": {
+    "name": "livewire.preview-file",
+    "domain": null,
+    "action": "Livewire\\Controllers\\FilePreviewHandler@handle",
+    "uri": "livewire/preview-file/{filename}",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "home": {
+    "name": "home",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\HomeController@index",
+    "uri": "home",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "dashboard": {
+    "name": "dashboard",
+    "domain": null,
+    "action": "Closure",
+    "uri": "dashboard",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "all.category": {
+    "name": "all.category",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\CategoryController@AllCat",
+    "uri": "category/all",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "store.category": {
+    "name": "store.category",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\CategoryController@AddCat",
+    "uri": "category/add",
+    "method": [
+      "POST"
+    ]
+  },
+  "all.brand": {
+    "name": "all.brand",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\BrandController@AllBrand",
+    "uri": "brand/all",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "store.brand": {
+    "name": "store.brand",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\BrandController@StoreBrand",
+    "uri": "brand/add",
+    "method": [
+      "POST"
+    ]
+  },
+  "multi.image": {
+    "name": "multi.image",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\BrandController@Multipic",
+    "uri": "multi/image",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "store.image": {
+    "name": "store.image",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\BrandController@StoreImage",
+    "uri": "multi/add",
+    "method": [
+      "POST"
+    ]
+  },
+  "database.setting": {
+    "name": "database.setting",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\DbController@DbSetting",
+    "uri": "database/setting",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "user.logout": {
+    "name": "user.logout",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\BrandController@Logout",
+    "uri": "user/logout",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "home.slider": {
+    "name": "home.slider",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\HomeController@HomeSlider",
+    "uri": "home/slider",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "add.slider": {
+    "name": "add.slider",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\HomeController@AddSlider",
+    "uri": "add/slider",
+    "method": [
+      "GET",
+      "HEAD"
+    ]
+  },
+  "store.slider": {
+    "name": "store.slider",
+    "domain": null,
+    "action": "App\\Http\\Controllers\\HomeController@StoreSlider",
+    "uri": "store/slider",
+    "method": [
+      "POST"
+    ]
+  }
+}
