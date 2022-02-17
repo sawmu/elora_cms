@@ -19,7 +19,7 @@
                             All Brand
                         </div>
                         <table class="table table-striped">
-                            <thead class="table-dark">
+                            <thead class="">
                               <tr>
                                 <th scope="col">No</th>
                                 <th scope="col">Brand Name</th>
@@ -29,11 +29,11 @@
                               </tr>
                             </thead>
                             <tbody>
-                               
+                            @php($i = 1)
                             @foreach ($brands as $brand)
                             
                                 <tr>
-                                    <th scope="row">{{ $brands->firstItem()+$loop->index }}</th>
+                                    <th scope="row">{{ $i ++ }}</th>
                                     <td>{{ $brand->brand_name }}</td>
                                     <td>  
                                         <img src="{{ asset($brand->brand_image) }} "  style="height: 60px; width:60px" alt=" {{ $brand->brand_name }} ">
@@ -63,7 +63,7 @@
 
                       
                     </div>
-                    {{ $brands->links() }}
+                   
                 </div>
 
                 <div class="col-md-4">

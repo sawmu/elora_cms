@@ -4,27 +4,100 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use Artesaos\SEOTools\Facades\SEOTools;
+use App\Models\Slider;
+use Auth;
+use Illuminate\Support\Carbon;
+use Image;
+
 
 class HomeController extends Controller
 {
-    /**
-     * Create a new controller instance.
-     *
-     * @return void
-     */
-    public function __construct()
+
+    public function HomeSlider()
     {
-        $this->middleware('auth');
+        $sliders = Slider::latest()->get();
+        return view('admin.slider.index', compact('sliders'));
     }
 
-    /**
-     * Show the application dashboard.
-     *
-     * @return \Illuminate\Contracts\Support\Renderable
-     */
-    public function index()
+    public function AddSlider()
     {
-        
-        return view('home');
+        return view('admin.slider.create');
     }
+
+    public function StoreSlider(Request $request)
+    {
+        $slider_image = $request->file('image'); 
+
+        $name_gen = hexdec(uniqid()).'.'.$slider_image->getClientOriginalExtension();
+
+        Image::make($slider_image)->resize(1920, 1088)->save('images/slider/'.$name_gen);
+
+        $last_img = 'images/slider/'.$name_gen;
+
+        // To add data
+        Slider::insert([
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $last_img,
+            'created_at' => Carbon::now(),
+            
+        ]);
+
+        return Redirect()->route('home.slider')->with('success', 'Slider Inserted Successfull');
+    }
+
+    public function Edit($id){
+            
+        $slider = Slider::find($id);
+
+        return view('admin.slider.edit', compact('slider'));
+    }
+
+    public function Update(Request $request, $id){
+        // To add image
+        $slider_image = $request->file('image'); //Need to Get the image from file field form FE
+        $old_image = $request->old_image; //Need to Get the image from file field form FE
+        if ($slider_image) {
+           $name_gen = hexdec(uniqid()); //Need to generate the image name to number using hexdec
+           $img_ext = strtolower($slider_image->getClientOriginalExtension()); //Need to get the image extension
+           $img_name = $name_gen.'.'.$img_ext; // Image file name 123.jpg
+           $upload_path = 'images/slider/'; // Image file path
+           $last_img = $upload_path.$img_name; // define the image path
+           $slider_image->move($upload_path, $img_name); // Move the image to the path
+           
+          unlink($old_image); // Delete the old image
+  
+          $slider = Slider::find($id)->update([
+            'title' => $request->title,
+            'description' => $request->description,
+            'image' => $last_img,
+            'created_at' => Carbon::now(),
+          ]);
+          
+  
+          return Redirect()->back()->with('success', 'Slider Updated Successfull');
+        } else {
+           $slider = Slider::find($id)->update([
+               'title' => $request->title,
+               'description' => $request->description,
+               'updated_at' => Carbon::now(),
+           ]);
+          return Redirect()->route('home.slider')->with('success', 'Slider Updated Successfull');
+
+        }
+
+         
+   }
+
+   public function Delete($id){
+
+    $image = Slider::find($id);
+    $old_image = $image->image;
+    unlink($old_image);
+
+
+    $slider = Slider::find($id)->delete();
+
+    return Redirect()->back()->with('success', 'Slider Deleted Successfull');
+} 
 }
