@@ -1109,14 +1109,14 @@ select {
 .mb-0 {
   margin-bottom: 0px;
 }
+.mb-5 {
+  margin-bottom: 1.25rem;
+}
 .mr-auto {
   margin-right: auto;
 }
 .mb-1 {
   margin-bottom: 0.25rem;
-}
-.mb-5 {
-  margin-bottom: 1.25rem;
 }
 .mt-0 {
   margin-top: 0px;
@@ -1487,14 +1487,14 @@ select {
 .p-6 {
   padding: 1.5rem;
 }
+.p-5 {
+  padding: 1.25rem;
+}
 .p-0 {
   padding: 0px;
 }
 .p-4 {
   padding: 1rem;
-}
-.p-5 {
-  padding: 1.25rem;
 }
 .px-4 {
   padding-left: 1rem;
