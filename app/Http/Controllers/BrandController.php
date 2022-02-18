@@ -22,7 +22,7 @@ class BrandController extends Controller
 
         $brands = Brand::latest()->get();
 
-        return view('admin.brand.index', compact('brands'));
+        return view('admin.brand.index', compact('brands')); 
     }
 
     public function StoreBrand(Request $request){
