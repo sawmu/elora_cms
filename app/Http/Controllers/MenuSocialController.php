@@ -3,20 +3,21 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\MenuItem;
+use App\Models\MenuSocial;
+use Auth;
+use Illuminate\Support\Carbon;
+use Image;
 
-
-class MenuItemController extends Controller
+class MenuSocialController extends Controller
 {
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
-    public function AllMenu()
+    public function index()
     {
-        $navmenu = MenuItem::all();
-        return view('admin.menuItems.create', compact('navmenu'));
+        //
     }
 
     /**
@@ -24,9 +25,10 @@ class MenuItemController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function CreateMenu()
+    public function create()
     {
-        return view('admin.menuitems.create');
+        $menusocial = MenuSocial::all();
+        return view('admin.menusocial.create', compact('menusocial'));
     }
 
     /**
@@ -35,17 +37,20 @@ class MenuItemController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function StoreMenu(Request $request)
+    public function store(Request $request)
     {
-        MenuItem::insert([
+       
+
+        // To add data
+        MenuSocial::insert([
             'name' => $request->name,
+            'image' => $request->image,
             'link' => $request->link,
-            'status' => $request->status,
+            'created_at' => Carbon::now(),
+            
         ]);
 
-        return redirect()->back()->with('success', 'Menu Item Created Successfully');
-
-     
+        return Redirect()->back()->with('success', 'Icon Inserted Successfull');
     }
 
     /**
@@ -67,11 +72,8 @@ class MenuItemController extends Controller
      */
     public function edit($id)
     {
-
-        $menu = MenuItem::find($id);
-
-        return view('admin.menuItems.edit', compact('menu'));
-        //
+        $menu = MenuSocial::find($id);
+        return view('admin.menusocial.edit', compact('menu'));
     }
 
     /**
@@ -83,14 +85,14 @@ class MenuItemController extends Controller
      */
     public function update(Request $request, $id)
     {
-        $menu = MenuItem::find($id)->update([
+        $menu = MenuSocial::find($id)->update([
             'name' => $request->name,
+            'image' => $request->image,
             'link' => $request->link,
-            'status' => $request->status,
-          
-          ]);
+            'created_at' => Carbon::now(),
+        ]);
 
-          return redirect()->route('all.menu')->with('success', 'Menu Item Updated Successfully');
+        return redirect()->route('create.social')->with('success', 'Icon Updated Successfull');
     }
 
     /**
@@ -101,8 +103,7 @@ class MenuItemController extends Controller
      */
     public function destroy($id)
     {
-        $menu = MenuItem::find($id)->delete();
-
-        return redirect()->back()->with('success', 'Menu Item Deleted Successfully');
+        $menu = MenuSocial::find($id)->delete();
+        return redirect()->route('create.social')->with('success', 'Icon Deleted Successfull');
     }
 }

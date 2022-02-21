@@ -6,7 +6,7 @@
         <h2>Edit Menu Item</h2>
     </div>
     <div class="card-body">
-        <form action="{{ url('menu/update/'.$menu->id) }}" method="POST" enctype="multipart/form-data">
+        <form action="{{ url('social/update/'.$menu->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             <div class="form-group">
                 <label for="MenuName">Name</label>
@@ -14,17 +14,13 @@
         
             </div>
             <div class="form-group">
+                <label for="MenuLink">Icon</label>
+                <input type="text" name="image" value=" {{ $menu->image }}" class="form-control" id="menu_link" placeholder="Enter Menu Link">
+            </div>
+            
+            <div class="form-group">
                 <label for="MenuLink">Link</label>
                 <input type="text" name="link" value=" {{ $menu->link }}" class="form-control" id="menu_link" placeholder="Enter Menu Link">
-            </div>
-            <div class="form-group">
-                <label for="exampleFormControlSelect12">Status</label>
-                <select class="form-control" id="menu_status" name="status" value=" {{ $menu->status }}">
-                    <option>Enabled</option>
-                    <option>Disabled</option>
-                    
-                </select>
-
             </div>
         
             <div class="form-footer pt-4 pt-5 mt-4 border-top">

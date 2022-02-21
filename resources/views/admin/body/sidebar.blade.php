@@ -80,6 +80,13 @@
                                 </a>
                             </li>
 
+                            <li class="active">
+                                <a class="sidenav-item-link" href="{{route('create.social')}}">
+                                    <span class="nav-text">Social Menu</span>
+
+                                </a>
+                            </li>
+
 
                        
 

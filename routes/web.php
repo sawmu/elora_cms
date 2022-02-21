@@ -9,6 +9,9 @@ use App\Http\Controllers\DbController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\MenuItemController;
 use App\Providers\MenuItem;
+use App\Providers\MenuSocial;
+use App\Http\Controllers\MenuSocialController;
+
 
 use Artesaos\SEOTools\Facades\SEOTools;
 
@@ -86,6 +89,18 @@ Route::get('/menu/create',[MenuItemController::class, 'CreateMenu'])->name('crea
 Route::post('/menu/store',[MenuItemController::class, 'StoreMenu'])->name('store.menu');
 Route::get('/menu/edit/{id}',[MenuItemController::class, 'Edit']);
 Route::post('/menu/update/{id}',[MenuItemController::class, 'Update']);
+Route::get('/menu/delete/{id}',[MenuItemController::class, 'destroy']);
+
+// Menu Social
+
+Route::get('/social/create',[MenuSocialController::class, 'Create'])->name('create.social');
+Route::post('/social/store',[MenuSocialController::class, 'store'])->name('store.social');
+Route::get('/social/edit/{id}',[MenuSocialController::class, 'Edit']);
+Route::post('/social/update/{id}',[MenuSocialController::class, 'Update']);
+Route::get('/social/delete/{id}',[MenuSocialController::class, 'destroy']);
+
+
+
 
 
 

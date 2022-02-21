@@ -4,6 +4,7 @@ namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
 use App\Models\MenuItem;
+use App\Models\MenuSocial;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -31,6 +32,9 @@ class AppServiceProvider extends ServiceProvider
 
         $menuItems = MenuItem::where('status', 'Enabled')->orWhere('status', 'Disabled')->get();
         view()->share('menuItems', $menuItems);
+
+        $menusocial = MenuSocial::all();
+        view()->share('menusocial', $menusocial);
 
        
     }

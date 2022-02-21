@@ -30,7 +30,7 @@ class HomeController extends Controller
 
         $name_gen = hexdec(uniqid()).'.'.$slider_image->getClientOriginalExtension();
 
-        Image::make($slider_image)->resize(1920, 1088)->save('images/slider/'.$name_gen);
+        Image::make($slider_image)->resize(1920, 1080)->save('images/slider/'.$name_gen);
 
         $last_img = 'images/slider/'.$name_gen;
 
@@ -65,7 +65,7 @@ class HomeController extends Controller
            $last_img = $upload_path.$img_name; // define the image path
            $slider_image->move($upload_path, $img_name); // Move the image to the path
            
-          unlink($old_image); // Delete the old image
+        //   unlink($old_image); // Delete the old image
   
           $slider = Slider::find($id)->update([
             'title' => $request->title,
