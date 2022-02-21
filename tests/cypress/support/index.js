@@ -14,6 +14,8 @@
 // ***********************************************************
 
 /// <reference types="./" />
+// Import commands.js using ES2015 syntax:
+import './commands';
 
 import './laravel-commands';
 import './laravel-routes';

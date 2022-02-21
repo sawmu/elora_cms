@@ -7,6 +7,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\DbController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\AboutController;
+
 
 use Artesaos\SEOTools\Facades\SEOTools;
 
@@ -76,6 +78,15 @@ Route::post('/store/slider',[HomeController::class, 'StoreSlider'])->name('store
 Route::get('/slider/edit/{id}',[HomeController::class, 'Edit']);
 Route::post('/slider/update/{id}',[HomeController::class, 'Update']);
 Route::get('/slider/delete/{id}',[HomeController::class, 'Delete']);
+
+// Home About
+
+Route::get('/home/about',[AboutController::class, 'HomeAbout'])->name('home.about');
+Route::get('/add/about',[AboutController::class, 'AddAbout'])->name('add.about');
+Route::post('/store/about',[AboutController::class, 'StoreAbout'])->name('store.about');
+
+
+
 
 
 

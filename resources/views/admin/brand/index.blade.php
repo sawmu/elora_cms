@@ -84,7 +84,7 @@
 
                                 <div class="form-group">
                                     <label for="exampleInputEmail1" class="form-label mt-1">Brand image</label>
-                                    <input type="file" name="brand_image" class="form-control " id="exampleInputEmail1" aria-describedby="emailHelp">
+                                    <input type="file" name="brand_image" class="form-control " id="file-upload" aria-describedby="emailHelp">
                                       @error('brand_image')
                                           <span class="badge bg-info text-dark">{{ $message }}</span>
                                       @enderror
