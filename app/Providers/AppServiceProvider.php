@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use App\Models\MenuItem;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -27,5 +28,10 @@ class AppServiceProvider extends ServiceProvider
         // {
         //     \URL::forceScheme('https');
         // }
+
+        $menuItems = MenuItem::where('status', 'Enabled')->orWhere('status', 'Disabled')->get();
+        view()->share('menuItems', $menuItems);
+
+       
     }
 }

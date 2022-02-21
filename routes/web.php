@@ -7,6 +7,8 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\DbController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\MenuItemController;
+use App\Providers\MenuItem;
 
 use Artesaos\SEOTools\Facades\SEOTools;
 
@@ -76,6 +78,17 @@ Route::post('/store/slider',[HomeController::class, 'StoreSlider'])->name('store
 Route::get('/slider/edit/{id}',[HomeController::class, 'Edit']);
 Route::post('/slider/update/{id}',[HomeController::class, 'Update']);
 Route::get('/slider/delete/{id}',[HomeController::class, 'Delete']);
+
+// Menu Create
+
+Route::get('/menu/all',[MenuItemController::class, 'AllMenu'])->name('all.menu');
+Route::get('/menu/create',[MenuItemController::class, 'CreateMenu'])->name('create.menu');
+Route::post('/menu/store',[MenuItemController::class, 'StoreMenu'])->name('store.menu');
+Route::get('/menu/edit/{id}',[MenuItemController::class, 'Edit']);
+Route::post('/menu/update/{id}',[MenuItemController::class, 'Update']);
+
+
+
 
 
 

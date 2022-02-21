@@ -13,7 +13,8 @@ describe('Authentication', () => {
         cy.get('#password')
             .type('152433Edin@');
         
-        cy.contains('button', 'Log In').click();
+        cy.contains('button', 'Sign In').click();
+        cy.contains('The provided credentials are incorrect');
     })
 });
 

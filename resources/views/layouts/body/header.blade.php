@@ -8,7 +8,11 @@
 
       <nav class="nav-menu d-none d-lg-block">
         <ul>
-          <li class="active"><a href="/">Home</a></li>
+
+          @foreach ($menuItems as $item)
+          <li class="active"><a href="{{ $item->link}}">{{ $item->name }}</a></li>
+          @endforeach
+          {{-- <li class="active"><a href="/">Home</a></li>
 
           <li class="drop-down"><a href="#">About</a>
             <ul>
@@ -31,7 +35,7 @@
           <li><a href="#">Portfolio</a></li>
           <li><a href="#">Pricing</a></li>
           <li><a href="#">Blog</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="#">Contact</a></li> --}}
 
         </ul>
       </nav><!-- .nav-menu -->
