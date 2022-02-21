@@ -8,6 +8,7 @@ describe('Authentication', () => {
             .type('sawmukahbaw191@gmail.com');
         cy.get('#password')
             .type('152433Edin@');
+<<<<<<< HEAD:tests/cypress/integration/Elora/auth.spec.js
 
         cy.contains('button', 'Sign In').click();
     })
@@ -30,6 +31,11 @@ describe('Authentication', () => {
         // cy.get('[data-cy="file-input"]').attachFile(fixtureFile);
 
 
+=======
+        
+        cy.contains('button', 'Sign In').click();
+        cy.contains('The provided credentials are incorrect');
+>>>>>>> c360bf5a77ae85297ebd216d0b4bfbb9bca8e47d:tests/cypress/integration/auth.spec.js
     })
 
 
