@@ -35,9 +35,13 @@ Route::get('/email/verify', function () {
 })->middleware('auth')->name('verification.notice');
 
 Route::get('/', function () {
+    $string = replaceWhiteSpaceWithHyphen("Saw Mu Ka Hbaw");
+ 
+    echo $string;
+
     $brands = DB::table('brands')->get();
 
-    return view('home', compact('brands'));
+    return view('home', compact('brands', 'string'));
 });
 
 Auth::routes();
@@ -110,7 +114,24 @@ Route::get('/social/edit/{id}',[MenuSocialController::class, 'Edit']);
 Route::post('/social/update/{id}',[MenuSocialController::class, 'Update']);
 Route::get('/social/delete/{id}',[MenuSocialController::class, 'destroy']);
 
+Route::get('helper', function(){
+    $imageName = 'example.png';
+    $fullpath = productImagePath($imageName);
+  
+    dd($fullpath);
+});
+  
+Route::get('helper2', function(){
+    $newDateFormat = changeDateFormate(date('Y-m-d'),'m/d/Y');
+  
+    dd($newDateFormat);
+});
 
+Route::get('helper3', function(){
+    $string = replaceWhiteSpaceWithHyphen("Tech Prashant");
+  
+    
+});
 
 
 
