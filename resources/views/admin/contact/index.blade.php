@@ -21,10 +21,10 @@
                         <thead class="">
                           <tr>
                             <th scope="col" width="5%">No</th>
-                            <th scope="col" width="15%">Name</th>
-                            <th scope="col" width="15%">Phone</th>
-                            <th scope="col" width="15%">Email</th>
-                            <th scope="col" width="15%">Subject</th>
+                            <th scope="col" width="10%">Name</th>
+                            <th scope="col" width="10%">Phone</th>
+                            <th scope="col" width="10%">Email</th>
+                            <th scope="col" width="10%">Subject</th>
                             <th scope="col" width="25%">Message</th>
                             <th scope="col" width="15%">Action</th>
                           </tr>
