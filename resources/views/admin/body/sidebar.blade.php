@@ -101,27 +101,11 @@
 
 
                 <li class="has-sub">
-                    <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#charts" aria-expanded="false" aria-controls="charts">
-                        <i class="mdi mdi-chart-pie"></i>
-                        <span class="nav-text">Charts</span> <b class="caret"></b>
+                    <a class="sidenav-item-link" href="{{route('contact.all')}}" >
+                        <i class="mdi mdi-account-card-details"></i>
+                        <span class="nav-text">Contact Us</span> 
                     </a>
-                    <ul class="collapse" id="charts" data-parent="#sidebar-menu">
-                        <div class="sub-menu">
-
-
-
-                            <li>
-                                <a class="sidenav-item-link" href="chartjs.html">
-                                    <span class="nav-text">ChartJS</span>
-
-                                </a>
-                            </li>
-
-
-
-
-                        </div>
-                    </ul>
+                 
                 </li>
 
 

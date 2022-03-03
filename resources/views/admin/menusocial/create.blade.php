@@ -11,7 +11,7 @@
                     <div class="alert alert-primary" role="alert">
                         {{ session('success')}}
                     </div>   
-                @endif
+                    @endif
                     <div class="card-header">
                         Social Icon 
                     </div>
