@@ -123,6 +123,10 @@ Route::get('/contact_us/all',[ContactController::class, 'ContactAll'])->name('co
 Route::get('/contact_us',[ContactController::class, 'ContactForm'])->name('contact.form');
 Route::post('/contact_us/store',[ContactController::class, 'StoreContactForm'])->name('contact.store');
 
+Route::get('/contact/edit/{id}',[ContactController::class, 'Edit']);
+Route::post('/contact/update/{id}',[ContactController::class, 'Update']);
+Route::get('/contact/delete/{id}',[ContactController::class, 'destroy']);
+
 
 
 

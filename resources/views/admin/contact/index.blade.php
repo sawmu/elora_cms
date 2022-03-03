@@ -4,6 +4,7 @@
 
 <div class="py-12">
     <div class="container">
+        <button style="margin-bottom: 10px" class="btn btn-primary delete_all" data-url="{{ url('myproductsDeleteAll') }}">Delete All Selected</button>
         <div class="row">
            
             
@@ -17,9 +18,10 @@
                     <div class="card-header">
                         Contact Us
                     </div>
-                    <table class="table table-striped">
+                    <table class="table table-bordered">
                         <thead class="">
                           <tr>
+                           
                             <th scope="col" width="5%">No</th>
                             <th scope="col" width="10%">Name</th>
                             <th scope="col" width="10%">Phone</th>
@@ -35,9 +37,10 @@
                                 
                            
                            
-                        @foreach ($contacts as $contact)
+                        @foreach ($contacts as $key => $contact)
                         
-                            <tr>
+                            <tr id="tr_{{$contact->id}}">
+                                
                                 <th scope="row">{{ $contacts->firstItem()+$loop->index }}</th>
                                 <td>{{ $contact->name }}</td>
                                 <td>{{ $contact->phone}}</td>
@@ -75,4 +78,12 @@
 
 </div>
 
+
+
+
+
+
+
+
 @endsection
+

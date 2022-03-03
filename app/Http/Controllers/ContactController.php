@@ -5,6 +5,9 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Contacts;
 use Mail;
+use Auth;
+use Illuminate\Support\Carbon;
+
 
 class ContactController extends Controller
 {
@@ -45,5 +48,34 @@ class ContactController extends Controller
         });
 
         return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
+    }
+
+    public function destroy($id)
+    {
+        $contact = Contacts::findOrFail($id);
+        $contact->delete();
+        return redirect()->back()->with(['success' => 'Contact Deleted Successfully']);
+    }
+
+    public function Edit($id)
+    {
+        $contact = Contacts::findOrFail($id);
+        return view('admin.contact.edit', compact('contact'));
+    }
+
+    public function Update(Request $request, $id)
+    {
+
+        $contact = Contacts::find($id)->update([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'subject' => $request->subject,
+            'message' => $request->message,
+            
+           
+        ]);
+
+        return redirect()->route('contact.all')->with(['success' => 'Contact Updated Successfully']);
     }
 }
