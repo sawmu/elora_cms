@@ -14,11 +14,9 @@ use App\Http\Controllers\MenuItemController;
 use App\Providers\MenuItem;
 use App\Providers\MenuSocial;
 use App\Http\Controllers\MenuSocialController;
-<<<<<<< HEAD
-=======
+use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContactController;
 
->>>>>>> 42e88df28a0481552c1555adfd663c34b67a5c5c
 
 
 
@@ -133,20 +131,3 @@ Route::get('/contact/edit/{id}',[ContactController::class, 'Edit']);
 Route::post('/contact/update/{id}',[ContactController::class, 'Update']);
 Route::get('/contact/delete/{id}',[ContactController::class, 'destroy']);
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
->>>>>>> 42e88df28a0481552c1555adfd663c34b67a5c5c
