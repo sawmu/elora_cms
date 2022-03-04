@@ -115,9 +115,6 @@ Route::get('/social/create',[MenuSocialController::class, 'Create'])->name('crea
 Route::post('/social/store',[MenuSocialController::class, 'store'])->name('store.social');
 Route::get('/social/edit/{id}',[MenuSocialController::class, 'Edit']);
 Route::post('/social/update/{id}',[MenuSocialController::class, 'Update']);
-<<<<<<< HEAD
-Route::get('/social/delete/{id}',[MenuSocialController::class, 'destroy']);
-=======
 Route::get('/social/delete/{id}',[MenuSocialController::class, 'destroy']);
 
 
