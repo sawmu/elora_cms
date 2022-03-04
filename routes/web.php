@@ -7,14 +7,14 @@ use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\DbController;
 use App\Http\Controllers\HomeController;
-<<<<<<< HEAD
+
 use App\Http\Controllers\AboutController;
-=======
+
 use App\Http\Controllers\MenuItemController;
 use App\Providers\MenuItem;
 use App\Providers\MenuSocial;
 use App\Http\Controllers\MenuSocialController;
->>>>>>> c360bf5a77ae85297ebd216d0b4bfbb9bca8e47d
+
 
 
 use Artesaos\SEOTools\Facades\SEOTools;
@@ -86,13 +86,13 @@ Route::get('/slider/edit/{id}',[HomeController::class, 'Edit']);
 Route::post('/slider/update/{id}',[HomeController::class, 'Update']);
 Route::get('/slider/delete/{id}',[HomeController::class, 'Delete']);
 
-<<<<<<< HEAD
+
 // Home About
 
 Route::get('/home/about',[AboutController::class, 'HomeAbout'])->name('home.about');
 Route::get('/add/about',[AboutController::class, 'AddAbout'])->name('add.about');
 Route::post('/store/about',[AboutController::class, 'StoreAbout'])->name('store.about');
-=======
+
 // Menu Create
 
 Route::get('/menu/all',[MenuItemController::class, 'AllMenu'])->name('all.menu');
@@ -109,27 +109,3 @@ Route::post('/social/store',[MenuSocialController::class, 'store'])->name('store
 Route::get('/social/edit/{id}',[MenuSocialController::class, 'Edit']);
 Route::post('/social/update/{id}',[MenuSocialController::class, 'Update']);
 Route::get('/social/delete/{id}',[MenuSocialController::class, 'destroy']);
-
-
-
->>>>>>> c360bf5a77ae85297ebd216d0b4bfbb9bca8e47d
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
