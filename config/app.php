@@ -241,6 +241,7 @@ return [
             'Twitter'       => Artesaos\SEOTools\Facades\TwitterCard::class,
             'JsonLd'        => Artesaos\SEOTools\Facades\JsonLd::class,
             'JsonLdMulti'   => Artesaos\SEOTools\Facades\JsonLdMulti::class,
+            'Helper'        => App\Helpers\Helper::class,
             // or
             'SEO' => Artesaos\SEOTools\Facades\SEOTools::class,
             // ...

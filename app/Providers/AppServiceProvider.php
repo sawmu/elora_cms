@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use App\Models\MenuItem;
 use App\Models\MenuSocial;
+use Illuminate\Pagination\Paginator;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -35,6 +36,8 @@ class AppServiceProvider extends ServiceProvider
 
         $menusocial = MenuSocial::all();
         view()->share('menusocial', $menusocial);
+
+        Paginator::useBootstrap();
 
        
     }

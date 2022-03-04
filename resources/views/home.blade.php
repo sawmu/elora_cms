@@ -1,12 +1,17 @@
 @extends('layouts.master_home')
  
 @section('home_content')
+
       <!-- ======= About Us Section ======= -->
    <section id="about-us" class="about-us">
        <div class="container" data-aos="fade-up">
  
          <div class="section-title">
            <h2>About Us</strong></h2>
+           <div>
+         
+               {{ $string }}
+        </div>
          </div>
  
          <div class="row content">

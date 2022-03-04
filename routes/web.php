@@ -14,6 +14,11 @@ use App\Http\Controllers\MenuItemController;
 use App\Providers\MenuItem;
 use App\Providers\MenuSocial;
 use App\Http\Controllers\MenuSocialController;
+<<<<<<< HEAD
+=======
+use App\Http\Controllers\ContactController;
+
+>>>>>>> 42e88df28a0481552c1555adfd663c34b67a5c5c
 
 
 
@@ -35,9 +40,13 @@ Route::get('/email/verify', function () {
 })->middleware('auth')->name('verification.notice');
 
 Route::get('/', function () {
+    $string = replaceWhiteSpaceWithHyphen("Saw Mu Ka Hbaw");
+ 
+    echo $string;
+
     $brands = DB::table('brands')->get();
 
-    return view('home', compact('brands'));
+    return view('home', compact('brands', 'string'));
 });
 
 Auth::routes();
@@ -108,4 +117,36 @@ Route::get('/social/create',[MenuSocialController::class, 'Create'])->name('crea
 Route::post('/social/store',[MenuSocialController::class, 'store'])->name('store.social');
 Route::get('/social/edit/{id}',[MenuSocialController::class, 'Edit']);
 Route::post('/social/update/{id}',[MenuSocialController::class, 'Update']);
+<<<<<<< HEAD
 Route::get('/social/delete/{id}',[MenuSocialController::class, 'destroy']);
+=======
+Route::get('/social/delete/{id}',[MenuSocialController::class, 'destroy']);
+
+
+// Contact Form
+
+Route::get('/contact_us/all',[ContactController::class, 'ContactAll'])->name('contact.all');
+Route::get('/contact_us',[ContactController::class, 'ContactForm'])->name('contact.form');
+Route::post('/contact_us/store',[ContactController::class, 'StoreContactForm'])->name('contact.store');
+
+Route::get('/contact/edit/{id}',[ContactController::class, 'Edit']);
+Route::post('/contact/update/{id}',[ContactController::class, 'Update']);
+Route::get('/contact/delete/{id}',[ContactController::class, 'destroy']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 42e88df28a0481552c1555adfd663c34b67a5c5c

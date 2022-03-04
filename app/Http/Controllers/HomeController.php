@@ -9,13 +9,17 @@ use Auth;
 use Illuminate\Support\Carbon;
 use Image;
 
+use Helper;
+
 
 class HomeController extends Controller
 {
+  
 
     public function HomeSlider()
     {
         $sliders = Slider::latest()->get();
+       
         return view('admin.slider.index', compact('sliders'));
     }
 
