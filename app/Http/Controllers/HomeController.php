@@ -34,15 +34,22 @@ class HomeController extends Controller
 
         $name_gen = hexdec(uniqid()).'.'.$slider_image->getClientOriginalExtension();
 
-        Image::make($slider_image)->resize(1920, 1080)->save('images/slider/'.$name_gen);
+        Image::make($slider_image)->resize(665, 949)->save('images/slider/'.$name_gen);
 
         $last_img = 'images/slider/'.$name_gen;
 
         // To add data
         Slider::insert([
             'title' => $request->title,
+            'subtitle' => $request->subtitle,
             'description' => $request->description,
+            'shape_mark' => $request->shape_mark,
             'image' => $last_img,
+            'btn_name' => $request->btn_name,
+            'btn_link' => $request->btn_link,
+            'youtube_name' => $request->youtube_name,
+            'youtube_link' => $request->youtube_link,
+
             'created_at' => Carbon::now(),
             
         ]);
@@ -73,8 +80,14 @@ class HomeController extends Controller
   
           $slider = Slider::find($id)->update([
             'title' => $request->title,
+            'subtitle' => $request->subtitle,
             'description' => $request->description,
             'image' => $last_img,
+            'shape_mark' => $request->shape_mark,
+            'btn_name' => $request->btn_name,
+            'btn_link' => $request->btn_link,
+            'youtube_name' => $request->youtube_name,
+            'youtube_link' => $request->youtube_link,
             'created_at' => Carbon::now(),
           ]);
           
@@ -83,7 +96,13 @@ class HomeController extends Controller
         } else {
            $slider = Slider::find($id)->update([
                'title' => $request->title,
+               'subtitle' => $request->subtitle,
                'description' => $request->description,
+               'shape_mark' => $request->shape_mark,
+               'btn_name' => $request->btn_name,
+               'btn_link' => $request->btn_link,
+               'youtube_name' => $request->youtube_name,
+               'youtube_link' => $request->youtube_link,
                'updated_at' => Carbon::now(),
            ]);
           return Redirect()->route('home.slider')->with('success', 'Slider Updated Successfull');

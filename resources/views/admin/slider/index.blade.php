@@ -27,9 +27,16 @@
                             <thead class="">
                               <tr>
                                 <th scope="col" width="5%">No</th>
-                                <th scope="col" width="15%">Slider Title</th>
-                                <th scope="col" width="25%">Slider Description</th>
-                                <th scope="col" width="15%">Slider Image</th>
+                                <th scope="col" width="15%">Title</th>
+                                <th scope="col" width="15%">Sub-Title</th>
+                                <th scope="col" width="25%">Shape Mark</th>
+                                <th scope="col" width="25%">Description</th>
+                                
+                                <th scope="col" width="15%">Image</th>
+                                <th scope="col" width="25%">Btn Name</th>
+                                <th scope="col" width="25%">Btn Link</th>
+                                <th scope="col" width="25%">Youtube</th>
+                                <th scope="col" width="25%">Youtube Link</th>
                                 <th scope="col" width="15%">Action</th>
                               </tr>
                             </thead>
@@ -44,10 +51,17 @@
                                 <tr>
                                     <th scope="row">{{ $i++}}</th>
                                     <td>{{ $slider->title }}</td>
+                                    <td>{{ $slider->subtitle }}</td>
+                                    <td>{{ $slider->shape_mark}}</td>
                                     <td>{{ $slider->description}}</td>
+                                   
                                     <td>  
                                         <img src="{{ asset($slider->image) }} "  style="height: 60px; width:60px" alt=" {{ $slider->title }} ">
                                     </td>
+                                    <td>{{ $slider->btn_name}}</td>
+                                    <td>{{ $slider->btn_link}}</td>
+                                    <td>{{ $slider->youtube_name}}</td>
+                                    <td>{{ $slider->youtube_link}}</td>
                                     <td>
                                     
                                         <button type="button" >

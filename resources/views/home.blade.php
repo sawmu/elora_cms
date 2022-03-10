@@ -10,7 +10,7 @@
            <h2>About Us</strong></h2>
            <div>
          
-               {{ $string }}
+       
         </div>
          </div>
  

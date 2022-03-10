@@ -38,13 +38,11 @@ Route::get('/email/verify', function () {
 })->middleware('auth')->name('verification.notice');
 
 Route::get('/', function () {
-    $string = replaceWhiteSpaceWithHyphen("Saw Mu Ka Hbaw");
- 
-    echo $string;
+    
 
     $brands = DB::table('brands')->get();
 
-    return view('home', compact('brands', 'string'));
+    return view('home', compact('brands'));
 });
 
 Auth::routes();
