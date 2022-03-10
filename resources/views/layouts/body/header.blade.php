@@ -28,8 +28,8 @@
     </div>
   </header><!-- End Header --> --}}
 
-          <!-- .....:::::: Start Header Section :::::.... -->
-          <header class="header-section sticky-header d-none d-lg-block">
+        <!-- .....:::::: Start Header Section :::::.... -->
+        <header class="header-section sticky-header d-none d-lg-block">
             <div class="header-wrapper">
                 <div class="container">
                     <div class="row justify-content-between align-items-center">
