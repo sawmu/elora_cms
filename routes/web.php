@@ -45,6 +45,8 @@ Route::get('/', function () {
     return view('home', compact('brands'));
 });
 
+
+
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
