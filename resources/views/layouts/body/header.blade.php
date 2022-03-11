@@ -44,7 +44,13 @@
                         <div class="col-auto">
                             <!-- Start Header Menu -->
                             <ul class="header-nav">
-                                <li><a href="index.html">Home</a></li>
+
+                                @foreach ($menuItems as $item)
+                                    @if ($item->status == 'Enabled')
+                                    <li><a href="{{ $item->link}}">{{ $item->name }}</a></li>   
+                                    @endif
+                                @endforeach
+                                {{-- <li><a href="index.html">Home</a></li>
                                 <li class="has-dropdown">
                                     <a href="service-list.html">Service</a>
                                     <ul class="submenu">
@@ -73,7 +79,7 @@
                                     <li><a href="404-page.html">404 Page</a></li>
                                     </ul>
                                 </li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.html">Contact</a></li> --}}
                             </ul>
                             <!-- End Header Menu -->
                         </div>
@@ -120,7 +126,12 @@
                     <!-- Start Mobile Menu Nav -->
                     <div class="offcanvas-menu">
                         <ul>
-                            <li>
+                            @foreach ($menuItems as $item)
+                                @if ($item->status == 'Enabled')
+                                <li><a href="{{ $item->link}}">{{ $item->name }}</a></li>   
+                                @endif
+                            @endforeach
+                            {{-- <li>
                                 <a href="index.html"><span>Home</span></a>
                             </li>
                             <li>
@@ -153,7 +164,7 @@
                             </li>
                             <li>
                                 <a href="contact.html"><span>Contact</span></a>
-                            </li>
+                            </li> --}}
                         </ul>
                     </div> <!-- End Mobile Menu Nav -->
                 </div> <!-- End Mobile Menu -->
@@ -161,11 +172,14 @@
                 <!-- Start Mobile contact Info -->
                 <div class="mobile-contact-info text-center">
                     <ul class="social-link">
-                        <li><a target="_blank" href="https://example.com"><i class="icofont-facebook"></i></a>
+                        @foreach ($menusocial as $social)
+                        <li><a href="{{ $social->link }}" class="{{ $social->name }}" target="black"><i class="{{ $social->image }}"></i></a></li>
+                        @endforeach
+                        {{-- <li><a target="_blank" href="https://example.com"><i class="icofont-facebook"></i></a>
                         </li>
                         <li><a target="_blank" href="https://example.com"><i class="icofont-twitter"></i></a>
                         </li>
-                        <li><a target="_blank" href="https://example.com"><i class="icofont-skype"></i></a></li>
+                        <li><a target="_blank" href="https://example.com"><i class="icofont-skype"></i></a></li> --}}
                     </ul>
                 </div>
                 <!-- End Mobile contact Info -->

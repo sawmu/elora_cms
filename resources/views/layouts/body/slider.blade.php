@@ -57,7 +57,7 @@
                                 <h2 class="title-large">{{ $slider->subtitle }} <span class="shape-mark">{{ $slider->shape_mark }}</span></h2>
                                 <p>{{ $slider->description }}</p>
 
-                                <a href="{{ $slider->btn_link }}" class="btn btn-xl btn-outline-one icon-space-left">{{ $slider->btn_name }} <i class="icofont-download"></i></a>
+                                {{-- <a href="{{ $slider->btn_link }}" class="btn btn-xl btn-outline-one icon-space-left">{{ $slider->btn_name }} <i class="icofont-download"></i></a> --}}
 
                                 <div class="video-link">
                                     <a class="wave-btn" href="{{ $slider->youtube_link }}" data-autoplay="true" data-vbtype="video">
@@ -91,10 +91,13 @@
 
                         <div class="image-half-round-shape"></div>
                         <div class="social-link">
-                            <a href="https://www.example.com" target="_blank"><i class="icofont-facebook"></i></a>
+                          @foreach ($menusocial as $social)
+                          <a href="{{ $social->link }}" class="{{ $social->name }}" target="black"><i class="{{ $social->image }}"></i></a>
+                          @endforeach
+                            {{-- <a href="https://www.example.com" target="_blank"><i class="icofont-facebook"></i></a>
                             <a href="https://www.example.com" target="_blank"><i class="icofont-dribbble"></i></a>
                             <a href="https://www.example.com" target="_blank"><i class="icofont-behance"></i></a>
-                            <a href="https://www.example.com" target="_blank"><i class="icofont-linkedin"></i></a>
+                            <a href="https://www.example.com" target="_blank"><i class="icofont-linkedin"></i></a> --}}
                         </div>
                     </div>
 
