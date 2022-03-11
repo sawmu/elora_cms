@@ -16,6 +16,7 @@ use App\Providers\MenuSocial;
 use App\Http\Controllers\MenuSocialController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContactController;
+use App\Http\Controllers\Star_countController;
 
 
 
@@ -92,6 +93,15 @@ Route::post('/store/slider',[HomeController::class, 'StoreSlider'])->name('store
 Route::get('/slider/edit/{id}',[HomeController::class, 'Edit']);
 Route::post('/slider/update/{id}',[HomeController::class, 'Update']);
 Route::get('/slider/delete/{id}',[HomeController::class, 'Delete']);
+
+// Home Star Count
+
+Route::get('/home/star_count',[Star_countController::class, 'HomeStar'])->name('home.star');
+Route::get('/add/star_count',[Star_countController::class, 'AddStar'])->name('add.star');
+Route::post('/store/star_count',[Star_countController::class, 'StoreStar'])->name('store.star');
+Route::get('/star_count/edit/{id}',[Star_countController::class, 'Edit']);
+Route::post('/star_count/update/{id}',[Star_countController::class, 'Update']);
+Route::get('/star_count/delete/{id}',[Star_countController::class, 'Delete']);
 
 
 // Home About

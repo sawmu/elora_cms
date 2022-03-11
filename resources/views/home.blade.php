@@ -2,7 +2,7 @@
  
 @section('home_content')
 
-      <!-- ======= About Us Section ======= -->
+      {{-- <!-- ======= About Us Section ======= -->
    <section id="about-us" class="about-us">
        <div class="container" data-aos="fade-up">
  
@@ -271,5 +271,5 @@
          </div>
  
        </div>
-   </section><!-- End Our Clients Section -->
+   </section><!-- End Our Clients Section --> --}}
 @endsection
