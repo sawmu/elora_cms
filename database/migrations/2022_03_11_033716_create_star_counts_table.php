@@ -15,9 +15,18 @@ class CreateStarCountsTable extends Migration
     {
         Schema::create('star_counts', function (Blueprint $table) {
             $table->id();
-            $table->string('icon');
-            $table->string('number');
-            $table->string('text');
+            $table->string('icon1');
+            $table->string('number1');
+            $table->string('text1');
+
+            $table->string('icon2');
+            $table->string('number2');
+            $table->string('text2');
+
+            $table->string('icon3');
+            $table->string('number3');
+            $table->string('text3');
+            
             $table->timestamps();
         });
     }

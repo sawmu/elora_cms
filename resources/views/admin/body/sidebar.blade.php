@@ -34,7 +34,7 @@
                             </li>
 
                             <li class="active">
-                                <a class="sidenav-item-link" href="{{route('home.star')}}">
+                                <a class="sidenav-item-link" href="{{route('update.star')}}">
                                     <span class="nav-text">Star Counts</span>
 
                                 </a>

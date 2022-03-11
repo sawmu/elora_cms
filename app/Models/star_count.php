@@ -9,8 +9,17 @@ class star_count extends Model
 {
     use HasFactory;
     protected $fillable = [
-        'icon',
-        'number',
-        'text',
+        'icon1',
+        'number1',
+        'text1',
+
+        'icon2',
+        'number2',
+        'text2',
+
+        'icon3',
+        'number3',
+        'text3',
+
     ];
 }

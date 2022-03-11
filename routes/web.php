@@ -42,6 +42,7 @@ Route::get('/', function () {
     
 
     $brands = DB::table('brands')->get();
+    $stars = DB::table('star_counts')->get();
 
     return view('home', compact('brands'));
 });
@@ -99,9 +100,9 @@ Route::get('/slider/delete/{id}',[HomeController::class, 'Delete']);
 Route::get('/home/star_count',[Star_countController::class, 'HomeStar'])->name('home.star');
 Route::get('/add/star_count',[Star_countController::class, 'AddStar'])->name('add.star');
 Route::post('/store/star_count',[Star_countController::class, 'StoreStar'])->name('store.star');
-Route::get('/star_count/edit/{id}',[Star_countController::class, 'Edit']);
-Route::post('/star_count/update/{id}',[Star_countController::class, 'Update']);
-Route::get('/star_count/delete/{id}',[Star_countController::class, 'Delete']);
+Route::get('/star/edit',[Star_countController::class, 'Edit'])->name('update.star');
+Route::post('/star/update',[Star_countController::class, 'Update']);
+Route::get('/star/delete/{id}',[Star_countController::class, 'Delete']);
 
 
 // Home About
