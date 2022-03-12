@@ -55,7 +55,7 @@ class Star_countController extends Controller
 
         $name_gen = hexdec(uniqid()).'.'.$star_image1->getClientOriginalExtension();
 
-        Image::make($star_image1)->resize(25, 26)->save('images/star/'.$name_gen);
+        Image::make($star_image1)->resize(100, 100)->save('images/star/'.$name_gen);
 
         $last_img1 = 'images/star/'.$name_gen;
 
@@ -63,7 +63,7 @@ class Star_countController extends Controller
 
         $name_gen = hexdec(uniqid()).'.'.$star_image2->getClientOriginalExtension();
 
-        Image::make($star_image2)->resize(25, 26)->save('images/star/'.$name_gen);
+        Image::make($star_image2)->resize(100, 100)->save('images/star/'.$name_gen);
 
         $last_img2 = 'images/star/'.$name_gen;
 
@@ -71,7 +71,7 @@ class Star_countController extends Controller
 
         $name_gen = hexdec(uniqid()).'.'.$star_image3->getClientOriginalExtension();
 
-        Image::make($star_image3)->resize(25, 26)->save('images/star/'.$name_gen);
+        Image::make($star_image3)->resize(100, 100)->save('images/star/'.$name_gen);
 
         $last_img3 = 'images/star/'.$name_gen;
   
@@ -93,6 +93,8 @@ class Star_countController extends Controller
           
   
           return Redirect()->back()->with('success', 'Slider Updated Successfull');
+
+          
        
   
 

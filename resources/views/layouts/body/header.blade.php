@@ -85,7 +85,7 @@
                         </div>
                         <div class="col">
                             <div class="header-btn-link text-end">
-                               <a href="contact.html" class="btn btn-sm btn-outline-one icon-space-left">Hire Me <i class="icofont-double-right"></i></a>
+                               <a href="contact.html" class="btn btn-sm btn-outline-one icon-space-left">Resume <i class="icofont-page"></i></a>
                             </div>
                         </div>
                     </div>
