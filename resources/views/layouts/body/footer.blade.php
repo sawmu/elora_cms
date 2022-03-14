@@ -1,75 +1,85 @@
-  <!-- ======= Footer ======= -->
-  <footer id="footer">
-
-    <div class="footer-top">
+ <!-- ...::: Start Footer Section :::... -->
+ <footer class="footer-section section-bg overflow-hidden pos-relative">
+  <div class="footer-inner-shape-top-left"></div>
+  <div class="footer-inner-shape-top-right"></div>
+  <div class="footer-section-top section-gap-t-165">
       <div class="container">
-        <div class="row">
-
-          <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Company</h3>
-            <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
-            </p>
+          <div class="row">
+              <div class="col-12">
+                  <!-- Start Section Content -->
+                  <div class="section-content pos-relative text-center">
+                      <span class="section-tag">Get Latest Updates</span>
+                      <h2 class="section-title">Subscribe For Newsletter</h2>
+                  </div>
+                  <!-- End Section Content -->
+              </div>
           </div>
-
-          <div class="col-lg-2 col-md-6 footer-links">
-            <h4>Useful Links</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
-            </ul>
+          <div class="footer-top-wrapper text-center">
+              <div class="row">
+                  <div class="col-12">
+                      <form action="#" class="footer-newsletter">
+                          <input type="email" placeholder="demo@example.com">
+                          <button class="submit-btn" type="submit">Subscribe Now</button>
+                      </form>
+                  </div>
+              </div>
           </div>
-
-          <div class="col-lg-3 col-md-6 footer-links">
-            <h4>Our Services</h4>
-            <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
-            </ul>
-          </div>
-
-          <div class="col-lg-4 col-md-6 footer-newsletter">
-            <h4>Join Our Newsletter</h4>
-            <p>Tamen quem nulla quae legam multos aute sint culpa legam noster magna</p>
-            <form action="" method="post">
-              <input type="email" name="email"><input type="submit" value="Subscribe">
-            </form>
-          </div>
-
-        </div>
       </div>
-    </div>
-
-    <div class="container d-md-flex py-4">
-
-      <div class="mr-md-auto text-center text-md-left">
-        <div class="copyright">
-          &copy; Copyright <strong><span>Elora Co., Ltd.</span></strong>. All Rights Reserved
-        </div>
-        <div class="credits">
-          <!-- All the links in the footer should remain intact. -->
-          <!-- You can delete the links only if you purchased the pro version. -->
-          <!-- Licensing information: https://bootstrapmade.com/license/ -->
-          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/company-free-html-bootstrap-template/ -->
-          Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-        </div>
+  </div>
+  <div class="footer-center section-gap-tb-165">
+      <div class="container">
+          <div class="row justify-content-between align-items-center mb-n5">
+              <div class="col-auto mb-5">
+                  <!-- Start Single Footer Info -->
+                  <div class="footer-single-info">
+                      <a href="tel:+0123456789" class="info-box">
+                          <span class="icon"><i class="icofont-phone"></i></span>
+                          <span class="text">86572648</span>
+                      </a>
+                  </div>
+                  <!-- Start Single Footer Info -->
+              </div>
+              <div class="col-auto mb-5">
+                  <!-- Start Single Footer Info -->
+                  <div class="footer-single-info">
+                      <a href="mailto:sawmukahbaw191@gmail.com" class="info-box">
+                          <span class="icon"><i class="icofont-envelope-open"></i></span>
+                          <span class="text">sawmukahbaw191@gmail.com</span>
+                      </a>
+                  </div>
+                  <!-- Start Single Footer Info -->
+              </div>
+              <div class="col-auto mb-5">
+                  <!-- Start Single Footer Info -->
+                  <div class="footer-single-info">
+                      <ul class="social-link">
+                          <li><a href="https://www.facebook.com/Tech-Sound-104071511660811" target="_blank"><i class="icofont-facebook"></i></a></li>
+                          <li><a href="https://github.com/sawmu" target="_blank"><i class="icofont-github"></i></a></li>
+                          <li><a href="https://www.linkedin.com/in/saw-mu-ka-hbaw-aye-313104158/" target="_blank"><i class="icofont-linkedin"></i></a></li>
+                      </ul>
+                  </div>
+                  <!-- Start Single Footer Info -->
+              </div>
+          </div>
       </div>
-      <div class="social-links text-center text-md-right pt-3 pt-md-0">
-        <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-        <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-        <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+  </div>
+  <div class="footer-bottom">
+      <div class="container">
+          <div class="row justify-content-center justify-content-md-between align-items-center flex-column-reverse flex-md-row">
+              <div class="col-auto">
+                  <div class="footer-copyright">
+                      <p class="copyright-text">Copyright &copy; 2022.All Rights Reserved. </p>
+                  </div>
+              </div>
+              <div class="col-auto">
+                  <a href="index.html" class="footer-logo">
+                      <div class="logo">
+                          <img src="assets/images/logo/logo.png" alt="">
+                      </div>
+                  </a>
+              </div>
+          </div>
       </div>
-    </div>
-  </footer><!-- End Footer -->
+  </div>
+</footer>
+<!-- ...::: End Footer Section :::... -->

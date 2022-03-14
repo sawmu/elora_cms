@@ -41,8 +41,8 @@
                             </li>
 
                             <li class="active">
-                                <a class="sidenav-item-link" href="index.html">
-                                    <span class="nav-text">Portfolio</span>
+                                <a class="sidenav-item-link" href="{{route('home.project')}}">
+                                    <span class="nav-text">Project</span>
 
                                 </a>
                             </li>

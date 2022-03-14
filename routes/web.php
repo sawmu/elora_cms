@@ -17,6 +17,8 @@ use App\Http\Controllers\MenuSocialController;
 use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Star_countController;
+use App\Http\Controllers\ProjectController;
+
 
 
 
@@ -103,6 +105,14 @@ Route::post('/store/star_count',[Star_countController::class, 'StoreStar'])->nam
 Route::get('/star/edit',[Star_countController::class, 'Edit'])->name('update.star');
 Route::post('/star/update',[Star_countController::class, 'Update']);
 Route::get('/star/delete/{id}',[Star_countController::class, 'Delete']);
+
+// Home Project
+Route::get('/home/project',[ProjectController::class, 'index'])->name('home.project');
+Route::get('/add/project',[ProjectController::class, 'create'])->name('add.project');
+Route::post('/store/project',[ProjectController::class, 'store'])->name('store.project');
+Route::get('/project/edit/{id}',[ProjectController::class, 'edit']);
+Route::post('/project/update/{id}',[ProjectController::class, 'update']);
+Route::get('/project/delete/{id}',[ProjectController::class, 'destroy']);
 
 
 // Home About
