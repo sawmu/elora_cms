@@ -18,6 +18,8 @@ use App\Http\Controllers\MenuController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\Star_countController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\PortfolioController;
 
 
 
@@ -148,4 +150,9 @@ Route::post('/contact_us/store',[ContactController::class, 'StoreContactForm'])-
 Route::get('/contact/edit/{id}',[ContactController::class, 'Edit']);
 Route::post('/contact/update/{id}',[ContactController::class, 'Update']);
 Route::get('/contact/delete/{id}',[ContactController::class, 'destroy']);
+
+// About Us 
+Route::get('/about',[AboutUsController::class, 'AboutUs'])->name('about.us');
+Route::get('/portfolio',[PortfolioController::class, 'Portfolio'])->name('portfolio.saw');
+
 

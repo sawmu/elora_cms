@@ -32,23 +32,25 @@
                         <!-- Start Project Box Single Item -->
                         @foreach ($projects as $project)
                         <div class="project-box-single-item swiper-slide">
-                            <div class="img-box">
-                                <div class="bg-overlay"></div>
-                                <div class="bg-image">
-                                    <img src="{{$project->image}}" alt="{{$project->title}}">
+                            <a href="{{$project->link}}" target="blank">
+                                <div class="img-box">
+                                    <div class="bg-overlay"></div>
+                                    <div class="bg-image">
+                                        <img src="{{$project->image}}" alt="{{$project->title}}">
+                                    </div>
+                                    <div class="image">
+                                        <img src="{{$project->image}}" alt="{{$project->title}}">
+                                    </div>
                                 </div>
-                                <div class="image">
-                                    <img src="{{$project->image}}" alt="{{$project->title}}">
-                                </div>
-                            </div>
-                            <div class="content">
-                                <h4 class="title"><a href="{{$project->link}}" target="blank">{{$project->title}}</a></h4>
+                                <div class="content">
+                                    <h4 class="title"><a href="{{$project->link}}" target="blank">{{$project->title}}</a></h4>
 
-                                <ul class="catagory-nav-item">
-                                    <li><a href="{{$project->link}}" target="blank">{{$project->subtitle}}</a></li>
-                                    
-                                </ul>
-                            </div>
+                                    <ul class="catagory-nav-item">
+                                        <li><a href="{{$project->link}}" target="blank">{{$project->subtitle}}</a></li>
+                                        
+                                    </ul>
+                                </div>
+                            </a>
                         </div>
                         @endforeach
                      

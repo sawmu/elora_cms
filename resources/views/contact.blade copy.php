@@ -60,7 +60,7 @@
                                     <!-- Start contact Single Box -->
                                     <li class="contact-sidebar-single-box">
                                         <h6 class="title-text">Website:</h6>
-                                        <a href="https://www.mukahbaw.com" class="link">www.mukahbaw.com</a>
+                                        <a href="https://www.example.com" class="link">www.mukahbaw.com</a>
                                     </li>
                                     <!-- End contact Single Box -->
                                     <!-- Start contact Single Box -->

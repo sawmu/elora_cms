@@ -85,7 +85,7 @@
                         </div>
                         <div class="col">
                             <div class="header-btn-link text-end">
-                               <a href="contact.html" class="btn btn-sm btn-outline-one icon-space-left">Resume <i class="icofont-page"></i></a>
+                               <a href="/about" class="btn btn-sm btn-outline-one icon-space-left">Resume <i class="icofont-external"></i></a>
                             </div>
                         </div>
                     </div>

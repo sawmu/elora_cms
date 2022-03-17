@@ -44,13 +44,14 @@
 
 
   <main id="main">
-    @yield('contact_us')
-         <!-- material-scrolltop button -->
-         <button class="material-scrolltop" type="button"></button>
+    @yield('portfolio')
+            <!-- material-scrolltop button -->
+            <button class="material-scrolltop" type="button"></button>
 
   </main><!-- End #main -->
 
 @include('layouts.body.footer')
+
 
 
 
