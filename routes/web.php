@@ -64,6 +64,8 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 
 
 
+// User Management All Route
+Route::prefix('home')->group(function(){
 
 Route::get('/category/all',[CategoryController::class, 'AllCat'])->name('all.category');
 Route::Post('/category/add',[CategoryController::class, 'AddCat'])->name('store.category');
@@ -92,7 +94,7 @@ Route::get('database/delete/multi',[DbController::class, 'DbMultiDelete']);
 Route::get('/user/logout',[BrandController::class, 'Logout'])->name('user.logout');
 
 // Admin All Route
-Route::get('/home/slider',[HomeController::class, 'HomeSlider'])->name('home.slider');
+Route::get('/slider',[HomeController::class, 'HomeSlider'])->name('home.slider');
 Route::get('/add/slider',[HomeController::class, 'AddSlider'])->name('add.slider');
 Route::post('/store/slider',[HomeController::class, 'StoreSlider'])->name('store.slider');
 Route::get('/slider/edit/{id}',[HomeController::class, 'Edit']);
@@ -101,7 +103,7 @@ Route::get('/slider/delete/{id}',[HomeController::class, 'Delete']);
 
 // Home Star Count
 
-Route::get('/home/star_count',[Star_countController::class, 'HomeStar'])->name('home.star');
+Route::get('/star_count',[Star_countController::class, 'HomeStar'])->name('home.star');
 Route::get('/add/star_count',[Star_countController::class, 'AddStar'])->name('add.star');
 Route::post('/store/star_count',[Star_countController::class, 'StoreStar'])->name('store.star');
 Route::get('/star/edit',[Star_countController::class, 'Edit'])->name('update.star');
@@ -109,7 +111,7 @@ Route::post('/star/update',[Star_countController::class, 'Update']);
 Route::get('/star/delete/{id}',[Star_countController::class, 'Delete']);
 
 // Home Project
-Route::get('/home/project',[ProjectController::class, 'index'])->name('home.project');
+Route::get('/project',[ProjectController::class, 'index'])->name('home.project');
 Route::get('/add/project',[ProjectController::class, 'create'])->name('add.project');
 Route::post('/store/project',[ProjectController::class, 'store'])->name('store.project');
 Route::get('/project/edit/{id}',[ProjectController::class, 'edit']);
@@ -119,18 +121,23 @@ Route::get('/project/delete/{id}',[ProjectController::class, 'destroy']);
 
 // Home About
 
-Route::get('/home/about',[AboutController::class, 'HomeAbout'])->name('home.about');
+Route::get('/about',[AboutController::class, 'HomeAbout'])->name('home.about');
 Route::get('/add/about',[AboutController::class, 'AddAbout'])->name('add.about');
 Route::post('/store/about',[AboutController::class, 'StoreAbout'])->name('store.about');
 
-// Menu Create
+});
 
-Route::get('/menu/all',[MenuItemController::class, 'AllMenu'])->name('all.menu');
-Route::get('/menu/create',[MenuItemController::class, 'CreateMenu'])->name('create.menu');
-Route::post('/menu/store',[MenuItemController::class, 'StoreMenu'])->name('store.menu');
-Route::get('/menu/edit/{id}',[MenuItemController::class, 'Edit']);
-Route::post('/menu/update/{id}',[MenuItemController::class, 'Update']);
-Route::get('/menu/delete/{id}',[MenuItemController::class, 'destroy']);
+// Menu Create
+Route::prefix('menu')->group(function(){
+
+Route::get('all',[MenuItemController::class, 'AllMenu'])->name('all.menu');
+Route::get('create',[MenuItemController::class, 'CreateMenu'])->name('create.menu');
+Route::post('store',[MenuItemController::class, 'StoreMenu'])->name('store.menu');
+Route::get('edit/{id}',[MenuItemController::class, 'Edit']);
+Route::post('update/{id}',[MenuItemController::class, 'Update']);
+Route::get('delete/{id}',[MenuItemController::class, 'destroy']);
+
+});
 
 // Menu Social
 

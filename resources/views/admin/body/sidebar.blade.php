@@ -1,3 +1,7 @@
+@php
+    $prefix = Request::route()->getPrefix();
+    $route = Route::current()->getName();
+@endphp
 
 <aside class="left-sidebar bg-sidebar">
     <div id="sidebar" class="sidebar sidebar-with-footer">
@@ -16,38 +20,38 @@
 
 
 
-                <li class="has-sub active expand">
+                <li class="has-sub {{ ($prefix == '/home')?'active expand':'' }}">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#dashboard" aria-expanded="false" aria-controls="dashboard">
                         <i class="mdi mdi-home-outline"></i>
                         <span class="nav-text">Home</span> <b class="caret"></b>
                     </a>
-                    <ul class="collapse show" id="dashboard" data-parent="#sidebar-menu">
+                    <ul class="collapse {{ ($prefix == '/home')?'show':'' }} " id="dashboard" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
 
 
-                            <li class="active">
+                            <li class="">
                                 <a class="sidenav-item-link" href="{{route('home.slider')}}">
                                     <span class="nav-text">Slider</span>
 
                                 </a>
                             </li>
 
-                            <li class="active">
+                            <li class="">
                                 <a class="sidenav-item-link" href="{{route('update.star')}}">
                                     <span class="nav-text">Star Counts</span>
 
                                 </a>
                             </li>
 
-                            <li class="active">
+                            <li class="">
                                 <a class="sidenav-item-link" href="{{route('home.project')}}">
                                     <span class="nav-text">Project</span>
 
                                 </a>
                             </li>
 
-                            <li class="active">
+                            <li class="">
                                 <a class="sidenav-item-link" href="{{ route('all.brand')}}">
                                     <span class="nav-text">Brand</span>
 
@@ -65,22 +69,22 @@
 
 
 
-                <li class="has-sub">
+                <li class="has-sub {{ ($prefix == '/menu')?'active expand':'' }}">
                     <a class="sidenav-item-link" href="javascript:void(0)" data-toggle="collapse" data-target="#ui-elements" aria-expanded="false" aria-controls="ui-elements">
                         <i class="mdi mdi-folder-multiple-outline"></i>
                         <span class="nav-text">Menu</span> <b class="caret"></b>
                     </a>
-                    <ul class="collapse" id="ui-elements" data-parent="#sidebar-menu">
+                    <ul class="collapse {{ ($prefix == '/menu')?'show':'' }}" id="ui-elements" data-parent="#sidebar-menu">
                         <div class="sub-menu">
 
-                            <li class="active">
+                            <li class="">
                                 <a class="sidenav-item-link" href="{{route('create.menu')}}">
                                     <span class="nav-text">Menu</span>
 
                                 </a>
                             </li>
 
-                            <li class="active">
+                            <li class="">
                                 <a class="sidenav-item-link" href="{{route('create.social')}}">
                                     <span class="nav-text">Social Menu</span>
 
