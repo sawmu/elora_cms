@@ -137,7 +137,7 @@ Route::get('edit/{id}',[MenuItemController::class, 'Edit']);
 Route::post('update/{id}',[MenuItemController::class, 'Update']);
 Route::get('delete/{id}',[MenuItemController::class, 'destroy']);
 
-});
+
 
 // Menu Social
 
@@ -146,6 +146,8 @@ Route::post('/social/store',[MenuSocialController::class, 'store'])->name('store
 Route::get('/social/edit/{id}',[MenuSocialController::class, 'Edit']);
 Route::post('/social/update/{id}',[MenuSocialController::class, 'Update']);
 Route::get('/social/delete/{id}',[MenuSocialController::class, 'destroy']);
+
+});
 
 
 // Contact Form
