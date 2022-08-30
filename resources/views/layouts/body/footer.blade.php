@@ -39,10 +39,12 @@
                             <h3>Information</h3>
                         </div>
                         <ul>
-                            <li><a href="about.html">About Us</a></li>
-                            <li><a href="blog.html">Latest News</a></li>
-                            <li><a href="accomodation.html">Accomodation</a></li>
-                            <li><a href="story.html">Our story</a></li>
+                            @foreach ($menuItems as $item)
+                                @if ($item->status == 'Enabled')
+                                <li><a href="{{ $item->link}}">{{ $item->name }}</a></li>   
+                                @endif
+                            @endforeach
+                            
                         </ul>
                     </div>
                 </div>
@@ -53,8 +55,8 @@
                         </div>
                         <div class="contact-ft">
                             <ul>
-                                <li><i class="fi flaticon-email"></i>Mylove@gmail.com</li>
-                                <li><i class="fi flaticon-phone-call"></i>+888 (123) 869523</li>
+                                <li><i class="fi flaticon-email"></i>sawmukahbaw191@gmail.com</li>
+                                <li><i class="fi flaticon-phone-call"></i>+65 8657 2648</li>
                                 <li><i class="fi flaticon-maps-and-flags"></i>New York – 1075 Firs Avenue
                                 </li>
                             </ul>
