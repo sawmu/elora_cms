@@ -113,6 +113,7 @@
                     class="fi flaticon-play"></i></a>
         </section>
         <!-- end wpo-video-section-->
+
         <!-- start story-section -->
         <section class="story-section section-padding" id="story">
             <div class="container">
@@ -138,7 +139,7 @@
                                 <div class="row align-items-center">
                                     <div class="col col-lg-6 col-12">
                                         <div class="img-holder right-align-text wow fadeInLeftSlow" data-wow-duration="1500ms">
-                                            <img src="assets/images/story/1.jpg" alt class="img img-responsive">
+                                            <img src="{{asset('frontend/assets/images/story/1.jpg')}}" alt class="img img-responsive">
                                         </div>
                                     </div>
                                     <div class="col col-lg-6 col-12">
@@ -171,7 +172,7 @@
                                     </div>
                                     <div class="col col-lg-6 col-12 order-lg-2 order-1">
                                         <div class="img-holder left-align-text">
-                                            <img src="assets/images/story/2.jpg" alt class="img img-responsive wow fadeInRightSlow" data-wow-duration="1500ms">
+                                            <img src="{{asset('frontend/assets/images/story/2.jpg')}}" alt class="img img-responsive wow fadeInRightSlow" data-wow-duration="1500ms">
                                             <span class="heart">
                                                 <i class="fi flaticon-dance"></i>
                                             </span>
@@ -183,7 +184,7 @@
                                 <div class="row align-items-center">
                                     <div class="col col-lg-6 col-12">
                                         <div class="img-holder right-align-text left-site right-heart">
-                                            <img src="assets/images/story/3.jpg" alt class="img img-responsive wow fadeInLeftSlow" data-wow-duration="1500ms">
+                                            <img src="{{asset('frontend/assets/images/story/3.jpg')}}" alt class="img img-responsive wow fadeInLeftSlow" data-wow-duration="1500ms">
                                             <span class="heart">
                                                 <i class="fi flaticon-dove"></i>
                                             </span>
@@ -209,12 +210,12 @@
             </div> <!-- end container -->
             <div class="shape-1">
                 <div class="sticky-shape">
-                    <img src="assets/images/rsvp/shape1.png" alt="E&M">
+                    <img src="{{asset('frontend/assets/images/rsvp/shape1.png')}}" alt="E&M">
                 </div>  
             </div>
             <div class="shape-2">
                 <div class="sticky-shape">
-                    <img src="assets/images/rsvp/shape2.png" alt="E&M">
+                    <img src="{{asset('frontend/assets/images/rsvp/shape2.png')}}" alt="E&M">
                 </div>
             </div>
         </section>
@@ -233,179 +234,6 @@
 
         <!-- end wpo-cta-section -->
 
-        <!-- start wpo-portfolio-section -->
-        <section class="wpo-portfolio-section section-padding" id="gallery">
-            <div class="container">
-                <div class="row">
-                    <div class="wpo-section-title">
-                        <div class="section-title-icon">
-                            <i class="fi flaticon-dove"></i>
-                        </div>
-                        <h2>Sweet Captured Moments</h2>
-                    </div>
-                </div>
-                <div class="sortable-gallery">
-                    <div class="gallery-filters"></div>
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="portfolio-grids gallery-container clearfix">
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/1.jpg" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/1.jpg" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/2.jpg" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/2.jpg" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/3.jpg" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/3.jpg" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/5.jpg" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/5.jpg" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/4.jpg" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/4.jpg" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                                <div class="grid">
-                                    <div class="img-holder">
-                                        <a href="assets/images/portfolio/6.jpg" class="fancybox"
-                                            data-fancybox-group="gall-1">
-                                            <img src="assets/images/portfolio/6.jpg" alt class="img img-responsive">
-                                            <div class="hover-content">
-                                                <i class="ti-plus"></i>
-                                            </div>
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div> <!-- end container -->
-        </section>
-        <!-- end wpo-portfolio-section -->
-
-        <!-- start of wpo-contact-section -->
-        <section class="wpo-contact-section section-padding" id="RSVP">
-            <div class="container">
-                <div class="wpo-contact-section-wrapper">
-                    <div class="wpo-contact-form-area">
-                        <div class="wpo-section-title">
-                            <div class="section-title-icon">
-                                <i class="fi flaticon-dove"></i>
-                            </div>
-                            <h2>Are You Attending?</h2>
-                        </div>
-                        <form method="post" class="contact-validation-active" id="contact-form-main">
-                            <div>
-                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
-                            </div>
-                            <div>
-                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
-                            </div>
-                            <div class="radio-buttons">
-                                <p>
-                                    <input type="radio" id="attend" name="radio-group" checked>
-                                    <label for="attend">Yes, I will be there</label>
-                                </p>
-                                <p>
-                                    <input type="radio" id="not" name="radio-group">
-                                    <label for="not">Sorry, I can’t come</label>
-                                </p>
-                            </div>
-                            <div>
-                                <select name="guest" class="form-control">
-                                    <option disabled="disabled" selected>Number Of Guests</option>
-                                    <option>01</option>
-                                    <option>02</option>
-                                    <option>03</option>
-                                    <option>04</option>
-                                    <option>05</option>
-                                </select>
-                            </div>
-                            <div>
-                                <input type="text" class="form-control" name="what" id="what"
-                                    placeholder="What Will You Be Attending">
-                            </div>
-                            <div>
-                                <select name="meal" class="form-control last">
-                                    <option disabled="disabled" selected>Meal Preferences</option>
-                                    <option>Chicken Soup</option>
-                                    <option>Motton Kabab</option>
-                                    <option>Chicken BBQ</option>
-                                    <option>Mix Salad</option>
-                                    <option>Beef Ribs </option>
-                                </select>
-                            </div>
-                            <div class="submit-area">
-                                <button type="submit" class="theme-btn-s3">Send An Inquiry</button>
-                                <div id="c-loader">
-                                    <i class="ti-reload"></i>
-                                </div>
-                            </div>
-                            <div class="clearfix error-handling-messages">
-                                <div id="success">Thank you</div>
-                                <div id="error"> Error occurred while sending email. Please try again later.
-                                </div>
-                            </div>
-                        </form>
-                        <div class="border-style"></div>
-                    </div>
-                    <div class="vector-1">
-                        <img src="assets/images/rsvp/flower1.png" alt="E&M">
-                    </div>
-                    <div class="vector-2">
-                        <img src="assets/images/rsvp/flower2.png" alt="E&M">
-                    </div>
-                </div>
-            </div>
-            <div class="shape-1">
-                <img src="assets/images/rsvp/shape1.png" alt="E&M">
-            </div>
-            <div class="shape-2">
-                <img src="assets/images/rsvp/shape2.png" alt="E&M">
-            </div>
-        </section>
-        <!-- end of wpo-contact-section -->
         <!-- start wpo-team-section -->
         <section class="wpo-team-section">
             <div class="container">
@@ -515,6 +343,181 @@
             </div> <!-- end container -->
         </section>
         <!-- end wpo-team-section -->
+
+        <!-- start wpo-portfolio-section -->
+        <section class="wpo-portfolio-section section-padding" id="gallery">
+            <div class="container">
+                <div class="row">
+                    <div class="wpo-section-title">
+                        <div class="section-title-icon">
+                            <i class="fi flaticon-dove"></i>
+                        </div>
+                        <h2>Sweet Captured Moments</h2>
+                    </div>
+                </div>
+                <div class="sortable-gallery">
+                    <div class="gallery-filters"></div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="portfolio-grids gallery-container clearfix">
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="{{asset('frontend/assets/images/portfolio/1.jpg')}}" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="{{asset('frontend/assets/images/portfolio/1.jpg')}}" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="{{asset('frontend/assets/images/portfolio/2.jpg')}}" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="{{asset('frontend/assets/images/portfolio/2.jpg')}}" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="{{asset('frontend/assets/images/portfolio/3.jpg')}}" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="{{asset('frontend/assets/images/portfolio/3.jpg')}}" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="{{asset('frontend/assets/images/portfolio/5.jpg')}}" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="{{asset('frontend/assets/images/portfolio/5.jpg')}}" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="{{asset('frontend/assets/images/portfolio/4.jpg')}}" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="{{asset('frontend/assets/images/portfolio/4.jpg')}}" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="grid">
+                                    <div class="img-holder">
+                                        <a href="{{asset('frontend/assets/images/portfolio/6.jpg')}}" class="fancybox"
+                                            data-fancybox-group="gall-1">
+                                            <img src="{{asset('frontend/assets/images/portfolio/6.jpg')}}" alt class="img img-responsive">
+                                            <div class="hover-content">
+                                                <i class="ti-plus"></i>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div> <!-- end container -->
+        </section>
+        <!-- end wpo-portfolio-section -->
+
+        <!-- start of wpo-contact-section -->
+        {{-- <section class="wpo-contact-section section-padding" id="RSVP">
+            <div class="container">
+                <div class="wpo-contact-section-wrapper">
+                    <div class="wpo-contact-form-area">
+                        <div class="wpo-section-title">
+                            <div class="section-title-icon">
+                                <i class="fi flaticon-dove"></i>
+                            </div>
+                            <h2>Are You Attending?</h2>
+                        </div>
+                        <form method="post" class="contact-validation-active" id="contact-form-main">
+                            <div>
+                                <input type="text" class="form-control" name="name" id="name" placeholder="Name">
+                            </div>
+                            <div>
+                                <input type="email" class="form-control" name="email" id="email" placeholder="Email">
+                            </div>
+                            <div class="radio-buttons">
+                                <p>
+                                    <input type="radio" id="attend" name="radio-group" checked>
+                                    <label for="attend">Yes, I will be there</label>
+                                </p>
+                                <p>
+                                    <input type="radio" id="not" name="radio-group">
+                                    <label for="not">Sorry, I can’t come</label>
+                                </p>
+                            </div>
+                            <div>
+                                <select name="guest" class="form-control">
+                                    <option disabled="disabled" selected>Number Of Guests</option>
+                                    <option>01</option>
+                                    <option>02</option>
+                                    <option>03</option>
+                                    <option>04</option>
+                                    <option>05</option>
+                                </select>
+                            </div>
+                            <div>
+                                <input type="text" class="form-control" name="what" id="what"
+                                    placeholder="What Will You Be Attending">
+                            </div>
+                            <div>
+                                <select name="meal" class="form-control last">
+                                    <option disabled="disabled" selected>Meal Preferences</option>
+                                    <option>Chicken Soup</option>
+                                    <option>Motton Kabab</option>
+                                    <option>Chicken BBQ</option>
+                                    <option>Mix Salad</option>
+                                    <option>Beef Ribs </option>
+                                </select>
+                            </div>
+                            <div class="submit-area">
+                                <button type="submit" class="theme-btn-s3">Send An Inquiry</button>
+                                <div id="c-loader">
+                                    <i class="ti-reload"></i>
+                                </div>
+                            </div>
+                            <div class="clearfix error-handling-messages">
+                                <div id="success">Thank you</div>
+                                <div id="error"> Error occurred while sending email. Please try again later.
+                                </div>
+                            </div>
+                        </form>
+                        <div class="border-style"></div>
+                    </div>
+                    <div class="vector-1">
+                        <img src="assets/images/rsvp/flower1.png" alt="E&M">
+                    </div>
+                    <div class="vector-2">
+                        <img src="assets/images/rsvp/flower2.png" alt="E&M">
+                    </div>
+                </div>
+            </div>
+            <div class="shape-1">
+                <img src="assets/images/rsvp/shape1.png" alt="E&M">
+            </div>
+            <div class="shape-2">
+                <img src="assets/images/rsvp/shape2.png" alt="E&M">
+            </div>
+        </section> --}}
+        <!-- end of wpo-contact-section -->
+        
         <!-- start wpo-event-section -->
         <section class="wpo-event-section section-padding" id="event">
             <div class="container">
@@ -584,7 +587,7 @@
         </section>
         <!-- end wpo-event-section -->
         <!-- start wpo-partners-section -->
-        <section class="wpo-partners-section">
+        <section class="footer-padding wpo-partners-section">
             <h2 class="hidden">Partners</h2>
             <div class="container">
                 <div class="row">
@@ -610,9 +613,11 @@
                 </div>
             </div> <!-- end container -->
         </section>
+
+        <div class="footer-padding"></div>
         <!-- end wpo-partners-section-->
         <!-- start wpo-blog-section -->
-        <section class="wpo-blog-section section-padding" id="blog">
+        {{-- <section class="wpo-blog-section section-padding" id="blog">
             <div class="container">
                 <div class="row">
                     <div class="wpo-section-title">
@@ -679,5 +684,5 @@
                 </div>
 
             </div> <!-- end container -->
-        </section>
+        </section> --}}
         <!-- end wpo-blog-section -->
