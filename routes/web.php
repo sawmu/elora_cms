@@ -164,4 +164,14 @@ Route::get('/contact/delete/{id}',[ContactController::class, 'destroy']);
 Route::get('/about',[AboutUsController::class, 'AboutUs'])->name('about.us');
 Route::get('/portfolio',[PortfolioController::class, 'Portfolio'])->name('portfolio.saw');
 
+Route::get('/clear', function() {
 
+    Artisan::call('cache:clear');
+    Artisan::call('config:clear');
+    Artisan::call('config:cache');
+    Artisan::call('view:clear');
+    Artisan::call('route:clear');
+
+    return "Cleared!";
+
+});
